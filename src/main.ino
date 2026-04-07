@@ -11,7 +11,7 @@
 uint32_t t_next = 0;
 
 // 数据缓冲区（储存16个传感器的数据）
-struct SensorData {
+struct SensorData {// 定义一个结构体来存储单个传感器的X、Y、Z数据
   uint32_t x, y, z;
 } sensor_data[16];
 
