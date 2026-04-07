@@ -70,8 +70,9 @@ void initAllSensors() {
         selectChannel(Wire, I2C_ADDR_1, ch);
         writeReg(Wire, 0x1C, 0x03);
         writeReg(Wire, 0x1A, SENSOR_FREQ_HZ);
-        writeReg(Wire, 0x1B, 0x20);
-        writeReg(Wire, 0x1B, 0xA0);
+        writeReg(Wire, 0x1B, 0x20);    // SET
+        delayMicroseconds(100);         // 等待 SET 完成
+        writeReg(Wire, 0x1B, 0xA0);    // 启用连续模式
         writeReg(Wire, 0x1D, 0x10);
         delay(10);
 
@@ -79,8 +80,9 @@ void initAllSensors() {
         selectChannel(I2Cone, I2C_ADDR_2, ch);
         writeReg(I2Cone, 0x1C, 0x03);
         writeReg(I2Cone, 0x1A, SENSOR_FREQ_HZ);
-        writeReg(I2Cone, 0x1B, 0x20);
-        writeReg(I2Cone, 0x1B, 0xA0);
+        writeReg(I2Cone, 0x1B, 0x20);    // SET
+        delayMicroseconds(100);         // 等待 SET 完成
+        writeReg(I2Cone, 0x1B, 0xA0);    // 启用连续模式
         writeReg(I2Cone, 0x1D, 0x10);
         delay(10);
     }
