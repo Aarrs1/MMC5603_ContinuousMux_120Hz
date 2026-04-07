@@ -1,0 +1,1 @@
+An ESP32-based multi-sensor acquisition system for MMC5603, utilizing dual I2C multiplexers to read 16 sensors. The design adopts continuous measurement mode (ODR = 120 Hz) combined with fixed-timing polling, ensuring deterministic sampling and efficient data streaming.
