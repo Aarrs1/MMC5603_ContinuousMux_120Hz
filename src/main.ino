@@ -9,8 +9,8 @@
 // I2C总线引脚定义
 #define SDA1_PIN 3
 #define SCL1_PIN 8
-#define SDA2_PIN 4
-#define SCL2_PIN 5
+#define SDA2_PIN 18
+#define SCL2_PIN 17
 
 // 定时控制
 #define SENSOR_FREQ_HZ 120          // 传感器输出频率
